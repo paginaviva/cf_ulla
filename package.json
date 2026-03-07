@@ -1,0 +1,30 @@
+{
+  "name": "worker-uno",
+  "version": "1.0.0",
+  "description": "Plantilla reutilizable para proyectos desplegados en Cloudflare Workers",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "build": "tsc --noEmit",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail",
+    "lint": "eslint src/**/*.ts",
+    "test": "echo \"No tests configured yet\" && exit 0"
+  },
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "serverless",
+    "edge"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240117.0",
+    "typescript": "^5.3.3",
+    "wrangler": "^3.28.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
