@@ -89,6 +89,7 @@ Debe reflejar el estado conocido y confirmado de:
 - 2026-03-06: Se crea la plantilla inicial del agente orquestador, tres agentes ejecutores mínimos y este inventario base.
 - 2026-03-07: Se incorpora `cloudflare/wrangler-action@v3`. Se crean: `deploy.yml`, `wrangler.toml`, `package.json`, `tsconfig.json`, `src/index.ts`, `.gitignore`. Worker `worker-uno` configurado para entorno `dev`.
 - 2026-03-07: Se elimina parámetro `ctx` no utilizado en `src/index.ts`. Se actualiza dominio en `wrangler.toml` a `worker-uno.pages.dev`. Secrets marcados como "Configurado en GitHub" en inventario.
+- 2026-03-07: **Corrección de error de despliegue:** Se elimina línea `route = { pattern = "worker-uno.pages.dev", zone_name = "pages.dev" }` de `wrangler.toml` debido a error `Could not find zone for 'pages.dev'`. Configuración `route` removida completamente del entorno `dev`.
 
 ## 10. Archivos de configuración creados
 
