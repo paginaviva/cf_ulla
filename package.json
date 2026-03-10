@@ -1,7 +1,7 @@
 {
-  "name": "worker-uno",
+  "name": "wk-api-inmo",
   "version": "1.0.0",
-  "description": "Plantilla reutilizable para proyectos desplegados en Cloudflare Workers",
+  "description": "ApiInmoBase - Worker principal para procesamiento de URLs inmobiliarias con OpenAI",
   "main": "src/index.ts",
   "scripts": {
     "dev": "wrangler dev",
@@ -15,7 +15,9 @@
     "cloudflare",
     "workers",
     "serverless",
-    "edge"
+    "edge",
+    "openai",
+    "real-estate"
   ],
   "author": "",
   "license": "MIT",

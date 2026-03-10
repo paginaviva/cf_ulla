@@ -48,3 +48,6 @@ coverage/
 # Temporal
 tmp/
 temp/
+
+# Inventario operativo (contiene datos sensibles de configuración)
+.github/inventario_recursos.md

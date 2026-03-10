@@ -35,4 +35,7 @@ la sugerencia debe revisarse frente a `.github/inventario_recursos.md`.
 - `.claude/agente orquestador.md`: coordina, valida y decide aceptación o bloqueo.
 - `.claude/natural-language-interpreter.md`: interpreta instrucciones del usuario.
 - `.claude/cloudflare-wrangler.md`: ejecuta cambios de Wrangler y despliegue.
+- `.claude/cloudflare-workers.md`: Diseña e implementa desarrollos en Cloudflare Workers.
+- `.claude/cloudflare-workflows.md`: Diseña e implementa desarrollos en Cloudflare Workflows.
+- `.claude/cloudflare-r2.md`: Diseña e implementa persistencia en Cloudflare R2.
 - `.claude/code-validator.md`: valida calidad y cumplimiento de reglas.

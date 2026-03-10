@@ -1,20 +1,58 @@
 # Configuración de Wrangler para Cloudflare Workers
 # Documentación: https://developers.cloudflare.com/workers/wrangler/configuration/
 
-name = "worker-uno"
+name = "wk-api-inmo"
 main = "src/index.ts"
-compatibility_date = "2024-01-01"
+compatibility_date = "2025-03-07"
 
 # ID de la cuenta Cloudflare - se gestiona mediante secrets
 # account_id = "${CF_ACCOUNT_ID}"  # No fijar en este archivo
 
 # Entorno de desarrollo
 [env.dev]
-name = "worker-uno-dev"
+name = "wk-api-inmo-dev"
+
+# Bindings de recursos Cloudflare para dev
+[[env.dev.workflows]]
+name = "wf-api-inmo"
+binding = "WF_API_INMO"
+class_name = "WfApiInmo"
+
+[[env.dev.r2_buckets]]
+bucket_name = "r2-almacen"
+binding = "DIR_API_INMO"
+
+[[env.dev.kv_namespaces]]
+id = "b9e80742f2a74d89b3e9083245b35709"
+binding = "SECRETS_API_INMO"
 
 # Variables de entorno para el entorno dev
 [env.dev.vars]
 ENVIRONMENT = "dev"
+LOG_LEVEL = "debug"
+
+# Entorno de production
+[env.production]
+name = "wk-api-inmo"
+
+# Bindings de recursos Cloudflare para production
+[[env.production.workflows]]
+name = "wf-api-inmo"
+binding = "WF_API_INMO"
+class_name = "WfApiInmo"
+
+[[env.production.r2_buckets]]
+bucket_name = "r2-almacen"
+binding = "DIR_API_INMO"
+
+[[env.production.kv_namespaces]]
+id = "b9e80742f2a74d89b3e9083245b35709"
+binding = "SECRETS_API_INMO"
+
+# Variables de entorno para el entorno production
+[env.production.vars]
+ENVIRONMENT = "production"
+LOG_LEVEL = "info"
 
 # Configuración de TypeScript
 [build]
